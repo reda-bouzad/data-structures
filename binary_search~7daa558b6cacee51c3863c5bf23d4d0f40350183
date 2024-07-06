@@ -1,0 +1,40 @@
+commit 0cea19df6f81298bb51661088dfbba5072bb51bf
+Author: reda-bouzad <redabouzadfst@gmail.com>
+Date:   Fri Jul 5 22:11:44 2024 +0100
+
+    binary trees
+
+diff --git a/binary_search.py b/binary_search.py
+new file mode 100644
+index 0000000..1905e60
+--- /dev/null
++++ b/binary_search.py
+@@ -0,0 +1,28 @@
++# Declarting An array
++# people = ["ahmed", "Badr", "Chadi", "Reda"]
++numbers = [1, 2, 3, 4, 5, 6, 7, 8]
++# for number in numbers:
++#     print(number)
++
++def binary_search(list, item):
++# Declaring Low, high, mid and guess
++    low = 0
++    high = len(list) - 1
++    
++    while low <= high:
++        mid = (low + high) // 2
++        guess = list[mid]
++        if guess == item:
++            return mid
++        if guess > item:
++            high = mid - 1
++        else:
++            low = mid + 1
++    return None;
++    
++print(binary_search(numbers, 8))
++
++
++
++
++
